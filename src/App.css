@@ -1,30 +1,111 @@
+/* ============================= */
+/* Base                          */
+/* ============================= */
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7f8fb;
   margin: 0;
-  padding: 0;
+  font-family: 'Arial', sans-serif;
+  color: #f5f5f5;
+  background-color: #000000; /* nero di base */
+  overflow-x: hidden;
 }
 
+h1, h2, h3 {
+  font-weight: bold;
+  color: #50eea8; /* verde acqua */
+}
+
+section {
+  padding: 60px 0;
+  background-color: transparent; /* trasparente per far vedere Vanta */
+}
+
+/* ============================= */
+/* Navbar con icone moderne      */
+/* ============================= */
+.custom-navbar {
+  background: rgba(17, 17, 17, 0.85); /* nero con trasparenza */
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.navbar-brand-custom {
+  color: #50eea8 !important;
+  font-weight: bold;
+  font-size: 1.4rem;
+  text-shadow: 0 0 8px rgba(80, 238, 168, 0.8);
+  transition: text-shadow 0.3s ease-in-out, transform 0.2s;
+}
+
+.navbar-brand-custom:hover {
+  text-shadow: 0 0 12px rgba(80, 238, 168, 1), 0 0 24px rgba(80, 238, 168, 0.8);
+  transform: scale(1.05);
+}
+
+.nav-link-custom {
+  color: #f5f5f5 !important;
+  margin-left: 20px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
+}
+
+.nav-link-custom svg {
+  stroke-width: 2.2; /* rende le icone più nitide */
+  transition: stroke 0.3s ease-in-out;
+}
+
+.nav-link-custom:hover {
+  color: #50eea8 !important;
+  text-shadow: 0 0 8px rgba(80, 238, 168, 0.8);
+}
+
+.nav-link-custom:hover svg {
+  stroke: #50eea8;
+}
+
+.custom-toggler {
+  border: none;
+}
+
+.custom-toggler:focus {
+  box-shadow: none;
+}
+
+
+/* ============================= */
+/* Hero                          */
+/* ============================= */
 .hero-title {
-  font-size: 3rem;
-  color: #0f1724;
+  color: #50eea8;
 }
 
 .hero-lead {
-  font-size: 1.2rem;
-  color: #555;
+  color: #d1d5db;
 }
 
-.about-profile {
-  border: 5px solid #007bff;
+.btn-primary.custom {
+  background-color: #50eea8;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
+.btn-primary.custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(80, 238, 168, 0.7);
+}
+
+/* ============================= */
+/* Skills                        */
+/* ============================= */
 .skill-badge {
   display: inline-block;
-  margin: 8px;
+  margin: 10px;
   padding: 12px 20px;
-  background: linear-gradient(135deg, #007bff, #00c6ff);
-  color: #fff;
+  background: #50eea8;
+  color: #000;
   border-radius: 25px;
   font-size: 1rem;
   font-weight: 600;
@@ -33,16 +114,64 @@ body {
 
 .skill-badge:hover {
   transform: scale(1.1);
-  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 0 12px rgba(80, 238, 168, 0.6);
 }
 
-.project-card {
-  border-radius: 15px;
+
+/* ============================= */
+/* Modal (Project Details)       */
+/* ============================= */
+.custom-modal {
+  background-color: #1f2937; /* grigio scuro */
+  color: #f5f5f5;
+  border-radius: 12px;
+}
+
+.custom-modal .modal-header,
+.custom-modal .modal-footer {
+  border: none;
+  background-color: #111;
+}
+
+.custom-modal .modal-title {
+  color: #50eea8;
+}
+
+/* Bottoni uniformi */
+.btn-primary.custom {
+  background-color: #50eea8;
+  border: none;
+  color: #000;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-primary.custom:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(80, 238, 168, 0.7);
+}
+
+/* Badge */
+.custom-badge {
+  background-color: #50eea8 !important;
+  color: #000 !important;
+  font-weight: 600;
+}
+
+
+/* Carousel dentro le card */
+.project-card .carousel {
+  border-radius: 15px 15px 0 0;
   overflow: hidden;
-  transition: transform 0.3s, box-shadow 0.3s;
 }
 
-.project-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+.project-card img {
+  object-fit: cover;
+  height: 200px;
+}
+
+/* Carousel nel Modal */
+.custom-modal .carousel-item img {
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6);
 }

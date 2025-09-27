@@ -6,10 +6,12 @@ import Projects from "./components/Projects";
 import Skills from "./components/Skills";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Background from "./components/Background"; // 👈 nuovo import
 
 function App() {
   return (
     <>
+      <Background /> {/* sfondo animato */}
       <NavbarComponent />
       <Hero />
       <About />
@@ -22,4 +24,6 @@ function App() {
 }
 
 export default App;
+
+
 
